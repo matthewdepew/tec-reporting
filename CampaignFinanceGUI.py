@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Jun 17 2015)
+## Python code generated with wxFormBuilder (version May 29 2018)
 ## http://www.wxformbuilder.org/
 ##
-## PLEASE DO "NOT" EDIT THIS FILE!
+## PLEASE DO *NOT* EDIT THIS FILE!
 ###########################################################################
 
 import wx
 import wx.xrc
+import wx.adv
 import wx.grid
 
 ###########################################################################
@@ -20,7 +21,7 @@ class frmCampaignFinanceMain ( wx.Frame ):
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 651,704 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
 		
 		bMain = wx.BoxSizer( wx.VERTICAL )
@@ -73,14 +74,14 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText40.Wrap( -1 )
 		gbSizer5.Add( self.m_staticText40, wx.GBPosition( 5, 0 ), wx.GBSpan( 1, 1 ), wx.ALIGN_CENTER|wx.ALL, 5 )
 		
-		self.dpkReportFrom = wx.DatePickerCtrl( self.pnlSummary, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkReportFrom = wx.adv.DatePickerCtrl( self.pnlSummary, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		gbSizer5.Add( self.dpkReportFrom, wx.GBPosition( 5, 1 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
 		self.m_staticText41 = wx.StaticText( self.pnlSummary, wx.ID_ANY, u"To:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText41.Wrap( -1 )
 		gbSizer5.Add( self.m_staticText41, wx.GBPosition( 5, 2 ), wx.GBSpan( 1, 1 ), wx.ALIGN_CENTER|wx.ALL, 5 )
 		
-		self.dpkReportTo = wx.DatePickerCtrl( self.pnlSummary, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkReportTo = wx.adv.DatePickerCtrl( self.pnlSummary, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		gbSizer5.Add( self.dpkReportTo, wx.GBPosition( 5, 3 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
 		self.btnExpenseReport = wx.Button( self.pnlSummary, wx.ID_ANY, u"Expense Report", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -104,14 +105,14 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText58.Wrap( -1 )
 		bSizer13.Add( self.m_staticText58, 0, wx.ALL, 5 )
 		
-		self.dpkFilterUnitemizedDonationFrom = wx.DatePickerCtrl( self.pnlUnitemizedDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkFilterUnitemizedDonationFrom = wx.adv.DatePickerCtrl( self.pnlUnitemizedDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer13.Add( self.dpkFilterUnitemizedDonationFrom, 0, wx.ALL, 5 )
 		
 		self.m_staticText59 = wx.StaticText( self.pnlUnitemizedDonationFilter, wx.ID_ANY, u"To:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText59.Wrap( -1 )
 		bSizer13.Add( self.m_staticText59, 0, wx.ALL, 5 )
 		
-		self.dpkFilterUnitemizedDonationTo = wx.DatePickerCtrl( self.pnlUnitemizedDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkFilterUnitemizedDonationTo = wx.adv.DatePickerCtrl( self.pnlUnitemizedDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer13.Add( self.dpkFilterUnitemizedDonationTo, 0, wx.ALL, 5 )
 		
 		self.btnFilterUnitemizedDonations = wx.ToggleButton( self.pnlUnitemizedDonationFilter, wx.ID_ANY, u"Filter Off", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -161,7 +162,7 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText60.Wrap( -1 )
 		gbSizer8.Add( self.m_staticText60, wx.GBPosition( 0, 0 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
-		self.dpkUnitemizedDonationDate = wx.DatePickerCtrl( self.m_panel19, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkUnitemizedDonationDate = wx.adv.DatePickerCtrl( self.m_panel19, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		gbSizer8.Add( self.dpkUnitemizedDonationDate, wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
 		self.m_staticText61 = wx.StaticText( self.m_panel19, wx.ID_ANY, u"Amount:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -214,14 +215,14 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText1.Wrap( -1 )
 		bSizer3.Add( self.m_staticText1, 0, wx.ALL, 5 )
 		
-		self.dpkDonationFrom = wx.DatePickerCtrl( self.pnlDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkDonationFrom = wx.adv.DatePickerCtrl( self.pnlDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer3.Add( self.dpkDonationFrom, 0, wx.ALL, 5 )
 		
 		self.m_staticText2 = wx.StaticText( self.pnlDonationFilter, wx.ID_ANY, u"To:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText2.Wrap( -1 )
 		bSizer3.Add( self.m_staticText2, 0, wx.ALL, 5 )
 		
-		self.dpkDonationTo = wx.DatePickerCtrl( self.pnlDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkDonationTo = wx.adv.DatePickerCtrl( self.pnlDonationFilter, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer3.Add( self.dpkDonationTo, 0, wx.ALL, 5 )
 		
 		self.btnFilterDonations = wx.ToggleButton( self.pnlDonationFilter, wx.ID_ANY, u"Filter Off", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -274,7 +275,7 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText3.Wrap( -1 )
 		gbsDonation.Add( self.m_staticText3, wx.GBPosition( 0, 0 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
-		self.dpkDonationDate = wx.DatePickerCtrl( self.pnlDonation, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkDonationDate = wx.adv.DatePickerCtrl( self.pnlDonation, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		gbsDonation.Add( self.dpkDonationDate, wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
 		self.m_staticText4 = wx.StaticText( self.pnlDonation, wx.ID_ANY, u"Donor:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -505,14 +506,14 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText23.Wrap( -1 )
 		bSizer8.Add( self.m_staticText23, 0, wx.ALL, 5 )
 		
-		self.dpkExpenseFrom = wx.DatePickerCtrl( self.m_panel11, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkExpenseFrom = wx.adv.DatePickerCtrl( self.m_panel11, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer8.Add( self.dpkExpenseFrom, 0, wx.ALL, 5 )
 		
 		self.m_staticText24 = wx.StaticText( self.m_panel11, wx.ID_ANY, u"To:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText24.Wrap( -1 )
 		bSizer8.Add( self.m_staticText24, 0, wx.ALL, 5 )
 		
-		self.dpkExpenseTo = wx.DatePickerCtrl( self.m_panel11, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkExpenseTo = wx.adv.DatePickerCtrl( self.m_panel11, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		bSizer8.Add( self.dpkExpenseTo, 0, wx.ALL, 5 )
 		
 		self.btnFilterExpenses = wx.ToggleButton( self.m_panel11, wx.ID_ANY, u"Filter Off", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -565,7 +566,7 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_staticText25.Wrap( -1 )
 		gbSizer3.Add( self.m_staticText25, wx.GBPosition( 0, 0 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
-		self.dpkExpenseDate = wx.DatePickerCtrl( self.m_panel12, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.DP_DEFAULT )
+		self.dpkExpenseDate = wx.adv.DatePickerCtrl( self.m_panel12, wx.ID_ANY, wx.DefaultDateTime, wx.DefaultPosition, wx.DefaultSize, wx.adv.DP_DEFAULT )
 		gbSizer3.Add( self.dpkExpenseDate, wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 		
 		self.m_staticText26 = wx.StaticText( self.m_panel12, wx.ID_ANY, u"Amount:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -774,10 +775,10 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_menubar1 = wx.MenuBar( 0 )
 		self.mFile = wx.Menu()
 		self.mNew = wx.MenuItem( self.mFile, wx.ID_ANY, u"New", wx.EmptyString, wx.ITEM_NORMAL )
-		self.mFile.AppendItem( self.mNew )
+		self.mFile.Append( self.mNew )
 		
 		self.mOpen = wx.MenuItem( self.mFile, wx.ID_ANY, u"Open", wx.EmptyString, wx.ITEM_NORMAL )
-		self.mFile.AppendItem( self.mOpen )
+		self.mFile.Append( self.mOpen )
 		
 		self.m_menubar1.Append( self.mFile, u"File" ) 
 		
