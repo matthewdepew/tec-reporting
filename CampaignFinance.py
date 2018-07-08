@@ -1055,7 +1055,7 @@ class CampaignFinanceForm(frmCampaignFinanceMain):
         (id INTEGER PRIMARY KEY,
         date DATE NOT NULL,
         amount REAL NOT NULL,
-        description TEXT''')
+        description TEXT)''')
         
         cur.execute('''CREATE TABLE IF NOT EXISTS donation_types
         (id INTEGER PRIMARY KEY,

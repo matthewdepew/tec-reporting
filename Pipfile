@@ -7,6 +7,7 @@ name = "pypi"
 
 [packages]
 wxpython = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "2.7"
