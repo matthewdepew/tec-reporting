@@ -94,11 +94,13 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.pnlSummary.SetSizer( gbSizer5 )
 		self.pnlSummary.Layout()
 		gbSizer5.Fit( self.pnlSummary )
-		self.ntbMain.AddPage( self.pnlSummary, u"Summary", False )
+		self.ntbMain.AddPage( self.pnlSummary, u"Summary", True )
 		self.pnlUnitemizedDonations = wx.Panel( self.ntbMain, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer12 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.pnlUnitemizedDonationFilter = wx.Panel( self.pnlUnitemizedDonations, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.pnlUnitemizedDonationFilter.Hide()
+		
 		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		self.m_staticText58 = wx.StaticText( self.pnlUnitemizedDonationFilter, wx.ID_ANY, u"From:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -209,6 +211,8 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		bDonations = wx.BoxSizer( wx.VERTICAL )
 		
 		self.pnlDonationFilter = wx.Panel( self.pnlDonations, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.pnlDonationFilter.Hide()
+		
 		bSizer3 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		self.m_staticText1 = wx.StaticText( self.pnlDonationFilter, wx.ID_ANY, u"From:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -493,13 +497,15 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.pnlDonors.SetSizer( bSizer5 )
 		self.pnlDonors.Layout()
 		bSizer5.Fit( self.pnlDonors )
-		self.ntbMain.AddPage( self.pnlDonors, u"Donors", True )
+		self.ntbMain.AddPage( self.pnlDonors, u"Donors", False )
 		self.pnlExpenses = wx.Panel( self.ntbMain, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		self.pnlExpenses.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
 		
 		bSizer7 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_panel11 = wx.Panel( self.pnlExpenses, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel11.Hide()
+		
 		bSizer8 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		self.m_staticText23 = wx.StaticText( self.m_panel11, wx.ID_ANY, u"From:", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -623,7 +629,7 @@ class frmCampaignFinanceMain ( wx.Frame ):
 		self.m_panel12.SetSizer( gbSizer3 )
 		self.m_panel12.Layout()
 		gbSizer3.Fit( self.m_panel12 )
-		bSizer7.Add( self.m_panel12, 1, wx.EXPAND |wx.ALL, 5 )
+		bSizer7.Add( self.m_panel12, 0, wx.EXPAND |wx.ALL, 5 )
 		
 		
 		self.pnlExpenses.SetSizer( bSizer7 )
