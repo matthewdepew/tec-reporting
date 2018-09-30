@@ -132,10 +132,10 @@ class CampaignFinanceForm(frmCampaignFinanceMain):
                 csv_rows += [['RCPT',row[14],'',row[0],row[2],row[1],row[3],row[4],row[5],
                             '',row[6],row[7],row[8],'USA',
                             '','',date_code,row[12],row[13],row[9],row[10],'','','','']]
-            saveFileDialog = wx.FileDialog(self,"Report File",defaultFile='report.csv',wildcard="csv files (*.csv)|*.csv",style=wx.FD_SAVE)
+            saveFileDialog = wx.FileDialog(self,"Report File",defaultFile='donation_report.csv',wildcard="csv files (*.csv)|*.csv",style=wx.FD_SAVE)
             if saveFileDialog.ShowModal() != wx.ID_CANCEL:
                 filename = saveFileDialog.GetPath()
-                if os.path.splitext(filename)[1].lower != '.csv':
+                if os.path.splitext(filename)[1].lower() != '.csv':
                     filename += '.csv'
                 with open(filename,'wb') as fout:
                     writer = csv.writer(fout)
@@ -145,7 +145,7 @@ class CampaignFinanceForm(frmCampaignFinanceMain):
                     writer.writerows(csv_rows)
             
     def btnExpenseReport_click(self,event):
-        from_date = self.dpkReportFrom.Value.Format('%Y-%m-%d')
+        from_date = self.dpkReportFrom.Value.Format('%Y-%m-d')
         to_date = self.dpkReportTo.Value.Format('%Y-%m-%d')
                 
         if self.con:
@@ -180,10 +180,10 @@ class CampaignFinanceForm(frmCampaignFinanceMain):
                             '','','','','','','','','',
                             '','','','','','','',row[12],'',
                             ]]
-            saveFileDialog = wx.FileDialog(self,"Report File",defaultFile='report.csv',wildcard="csv files (*.csv)|*.csv",style=wx.FD_SAVE)
+            saveFileDialog = wx.FileDialog(self,"Report File",defaultFile='expense_report.csv',wildcard="csv files (*.csv)|*.csv",style=wx.FD_SAVE)
             if saveFileDialog.ShowModal() != wx.ID_CANCEL:
                 filename = saveFileDialog.GetPath()
-                if os.path.splitext(filename)[1].lower != 'csv':
+                if os.path.splitext(filename)[1].lower() != '.csv':
                     filename += '.csv'
                 with open(filename,'wb') as fout:
                     writer = csv.writer(fout)
